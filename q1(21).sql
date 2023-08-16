@@ -14,5 +14,5 @@ create table employee
  select * from employee;
 
 Write an SQL query to find the team size of each of the employees.Return result table in any order
---> with cte as(  select employee_id, count(team_id) over (partition by team_id ) as team_size from employee)
-select * from cte order by employee_id;
+- with cte as(  select employee_id, count(team_id) over (partition by team_id ) as team_size from employee)
+    select * from cte order by employee_id;
