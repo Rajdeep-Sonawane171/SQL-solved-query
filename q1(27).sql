@@ -12,3 +12,5 @@ primary key(user_id)
 -- '_', period '.', and/or dash '-'. The prefix name must start with a letter.
 -- ● The domain is '@leetcode.com'.
 -- Return the result table in any order
+
+select * from users where mail regexp '^[a-zA-Z].[a-zA-Z0-9\.\_\-]*@leetcode.com$';
